@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="cn.focus.dc.ygjy.model.YgjySaleInfo" alias="YgjySaleInfo"/>
+		<typeAlias type="cn.focus.dc.ygjy.model.YgjyProjDetailInfo" alias="YgjyProjDetailInfo"/>
+		<typeAlias type="cn.focus.dc.ygjy.model.YgjyProjSaleInfo" alias="YgjyProjSaleInfo"/>
+		<typeAlias type="cn.focus.dc.ygjy.model.YgjyWorkInfo" alias="YgjyWorkInfo"/>
+		<typeAlias type="cn.focus.dc.ygjy.model.YgjyRoomInfo" alias="YgjyRoomInfo"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/YgjySaleInfoMapper.xml"/>
+		<mapper resource="mapper/YgjyProjDetailInfoMapper.xml"/>
+		<mapper resource="mapper/YgjyProjSaleInfoMapper.xml"/>
+		<mapper resource="mapper/YgjyWorkInfoMapper.xml"/>
+		<mapper resource="mapper/YgjyRoomInfoMapper.xml"/>
+	</mappers>
+</configuration>
