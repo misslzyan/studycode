@@ -11,4 +11,12 @@
 	</context:component-scan>
 	
 	<context:property-placeholder location="classpath:es.properties"/>
+	
+	
+	<!-- ansj插件 -->
+    <bean id="keyWordComputer" class="org.ansj.app.keyword.KeyWordComputer">
+    	<constructor-arg>
+    		<value>10</value>
+    	</constructor-arg>
+    </bean>
 </beans>
