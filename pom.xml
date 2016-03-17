@@ -15,13 +15,25 @@
 		<commons.dbcp.version>1.4</commons.dbcp.version>
 	</properties>
 	<dependencies>
-		
+
+		<!-- kafka -->
 		<dependency>
-		<groupId>cn.focus.dc</groupId>
-		<artifactId>crawler-cluster-api</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>0.9.0.0</version>
 		</dependency>
-		
+		<!-- <dependency>  
+	        <groupId>org.apache.kafka</groupId>  
+	        <artifactId>kafka_2.11</artifactId>  
+	        <version>0.8.2.2</version>  
+	    </dependency> -->
+
+		<dependency>
+			<groupId>cn.focus.dc</groupId>
+			<artifactId>crawler-cluster-api</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.ansj</groupId>
 			<artifactId>ansj_seg</artifactId>
