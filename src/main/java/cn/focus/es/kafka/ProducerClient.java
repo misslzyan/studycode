@@ -19,11 +19,11 @@ public class ProducerClient {
 		 props.put("linger.ms", 1);//延迟1ms 想server commit message
 		 props.put("buffer.memory", 33554432);
 		 props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-		 props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+		 props.put("value.serializer", "cn.focus.es.kafka.UserSerializer");
 
-		 Producer<String, String> producer = new KafkaProducer<>(props);
+		 Producer<String, User> producer = new KafkaProducer<>(props);
 		 for(int i = 0; i < 100; i++)
-		     producer.send(new ProducerRecord<String, String>("my-topic", Integer.toString(i), Integer.toString(i)),new Callback() {
+		     producer.send(new ProducerRecord<String, User>("user-topic", Integer.toString(i), new User(i+"",i+"")),new Callback() {
 				
 				@Override
 				public void onCompletion(RecordMetadata metadata, Exception exception) {
